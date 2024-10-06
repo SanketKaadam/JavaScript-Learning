@@ -1,7 +1,17 @@
 let acName = "sanket"
 let age = 25
 
+console.log(acName);
+
+
 console.log(`Hi, My name is ${acName} and I am ${age} years old.`);
+
+let stringWithNew = new String('Askay')
+let changeInString = stringWithNew;
+changeInString = "Ram"
+
+console.log(stringWithNew);
+
 
 let gameName = "Sanket-k-Kadam"
 
