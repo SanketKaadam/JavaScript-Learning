@@ -25,6 +25,6 @@ console.log(Math.floor(currentTime/1000));
 newDate.toLocaleString('default', {
     weekday: "long",
     
-})
+}) // this help to specifiy format for date and time
 
 
