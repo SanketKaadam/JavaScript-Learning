@@ -1,3 +1,5 @@
+// In JS we can store anything in variable like any value, function, array, object, JSON etc
+
 // var a = 10
 // const b = 20
 // let c = 30  // if i uncomment b and c then it will print this values not from if block values, but in case of variable a that value chnage bcoz we chnaged a value in if block and that updted value will be print
