@@ -1,0 +1,36 @@
+const myNums = [1, 2, 3]
+
+// const myTotal = myNums.reduce(function (acc, currval) {
+//     console.log(`acc: ${acc} and currval: ${currval}`);
+//     return acc + currval // currval is come from array and after adding both acc+currval this totalstored in cummilater.
+// }, 0) // here accumilate is zero 
+
+const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
+
+console.log(myTotal);
+
+
+const shoppingCart = [
+    {
+        itemName: "js course",
+        price: 2999
+    },
+    {
+        itemName: "py course",
+        price: 999
+    },
+    {
+        itemName: "mobile dev course",
+        price: 5999
+    },
+    {
+        itemName: "data science course",
+        price: 12999
+    },
+]
+
+const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+
+console.log(priceToPay);
+
+// when we want to add values that time we use this 
