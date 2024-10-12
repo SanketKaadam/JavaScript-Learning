@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div') // create div tag using JS
+    console.log(div); // print empty div tag eg  <div></div>
+    div.className = "main" // className and id is inbuild attibutes 
+    div.id = Math.round(Math.random() * 10 + 1) // 
+    div.setAttribute("title", "generated title") // here we create custome attributes eg title
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Chai aur code" // if you use innerText that time 1st it get orignal text in this case it is empty then it override with new text in this case "Chai aur code", this is not optimizes approch
+    const addText = document.createTextNode("Chai aur code") // here we 1st create node with text that we want to add, we know that evey text that we enter btween tags are nodes
+    div.appendChild(addText) // here we directly add that node into div tag
+
+    document.body.appendChild(div) // till above we only create div tag, add attribute and text, and it only saved in memeory not diplaying on page , here we add that tag in document so that it show on page.
+</script>
+</html>
