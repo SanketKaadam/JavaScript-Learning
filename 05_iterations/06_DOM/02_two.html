@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent); // retun object which contain parent as class
+    // console.log(parent.children); // this return HTMLCollection, so children retunr HTMLCollection
+    // console.log(parent.children[1].innerHTML); // we know that children retun HTMLCollection then we can use [] te fecth values using index.
+
+    // On HTMLCollection can't provide forEach but we can use for loop, parent not provide HTMLCollection but parent.children provide thats why we use that.
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild); // return 1st child element 
+    // console.log(parent.lastElementChild); // return last child element 
+
+    const dayOne = document.querySelector('.day') // here we fetch object whos class is day, 
+    // console.log(dayOne); // 
+    // console.log(dayOne.parentElement); // class = day parent tag class is parent, so it return parent element 
+    // console.log(dayOne.nextElementSibling); // return next element whos class = day. ie tuesday element
+
+    console.log("NODES: ", parent.childNodes);
+
+    // nodes are complex tree structure, when you put enter after <div class="parent"> that also consider as one node,
+    // same you press enter after <div class="day">Monday</div> consider as one more node
+    // in html one line break is count as node after that line break/press enter not consider as node.
+
+    //but if you add comment that consider as node and after comment you press enter that also conside as node
+</script>
+</html>
