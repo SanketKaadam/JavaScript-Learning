@@ -1,47 +1,51 @@
-let score = "33"
+// let score = "33"
 
-let numScore = Number(score)
+// let numScore = Number(score)
 
-console.log(numScore);
-console.log(typeof numScore);
+// console.log(numScore);
+// console.log(typeof numScore);
 
-let someNumber = 100
+// let someNumber = 100
 
-let numberInString = String(someNumber)
+// let numberInString = String(someNumber)
 
-console.log(numberInString);
-console.log(typeof numberInString);
+// console.log(numberInString);
+// console.log(typeof numberInString);
 
-let numWithString = "40asd"
+// let numWithString = "40asd"
 
-let numFromString = Number(numWithString)
+// let numFromString = Number(numWithString)
 
-console.log(numFromString);
-console.log(typeof numFromString);
+// console.log(numFromString);
+// console.log(typeof numFromString);
 
-let accountActive = 1
+// let accountActive = 1
 
-let booleanAcActive = Boolean(accountActive)
-console.log(booleanAcActive);
-console.log(typeof booleanAcActive);
+// let booleanAcActive = Boolean(accountActive) // 1 -> true
+// console.log(booleanAcActive);
+// console.log(typeof booleanAcActive);
 
 
-let accountActive2 = "sdasda"
+// let accountActive2 = "sdasda" // any value is true
 
-let booleanAcActive2 = Boolean(accountActive2)
-console.log(booleanAcActive2);
-console.log(typeof booleanAcActive2);
+// let booleanAcActive2 = Boolean(accountActive2)
+// console.log(booleanAcActive2);
+// console.log(typeof booleanAcActive2);
 
+// let AcActive3 = 0 // only for 0 and "" it giving false for other including -ve number it giving true
+// let booleanAcActive3 = Boolean(AcActive3)
+// console.log('booleanAcActive3', booleanAcActive3);
+// console.log(typeof booleanAcActive3);
 // --------------- Notes ----------------------
 
 let score1 = "hitesh"
 
-//console.log(typeof score);
-//console.log(typeof(score));
+// console.log(typeof score1);
+// console.log(typeof(score1));
 
 let valueInNumber = Number(score1)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+// console.log(typeof valueInNumber);
+// console.log(valueInNumber);
 
 
 // "33" => 33
@@ -82,10 +86,10 @@ let str2 = " hitesh"
 let str3 = str1 + str2
 // console.log(str3);
 
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// console.log("1" + 2); //12
+// console.log(1 + "2"); //12
+// console.log("1" + 2 + 2); //122
+// console.log(1 + 2 + "2"); // 32 
 
 // console.log( (3 + 4) * 5 % 3);
 
@@ -95,10 +99,15 @@ let str3 = str1 + str2
 let num1, num2, num3
 
 num1 = num2 = num3 = 2 + 2
+//console.log(num1);
+
 
 let gameCounter = 100
-++gameCounter;
-console.log(gameCounter);
+// ++gameCounter;
+// console.log(gameCounter);
+// gameCounter++
+// console.log(gameCounter);
+
 
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
