@@ -6,9 +6,9 @@ console.log(acName);
 
 console.log(`Hi, My name is ${acName} and I am ${age} years old.`);
 
-let stringWithNew = new String('Askay')
-let changeInString = stringWithNew;
-changeInString = "Ram"
+let stringWithNew = new String('Askay') // [String: 'Askay']
+let changeInString = stringWithNew; // object created in heap, both pointing same object
+changeInString = "Ram" // created in seperate string in stack
 
 console.log(stringWithNew);
 

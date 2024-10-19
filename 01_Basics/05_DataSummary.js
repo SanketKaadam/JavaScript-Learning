@@ -8,7 +8,7 @@ let acId  = Symbol("123")
 let acNum = 12345678912365445n
 let isLoggedIn = true
 
-console.log(id === acId);
+console.log(id === acId); // false, In JavaScript, each symbol created with Symbol() is guaranteed to be unique. Even if you provide the same description (or value) to Symbol(), the symbols will always be different.
 console.log(typeof age);
 console.log(typeof name);
 console.log(typeof temp);

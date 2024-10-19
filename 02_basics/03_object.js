@@ -26,7 +26,7 @@ let person = {
 
 // person.email = "sanket@zoho.com"
 // console.log(person);
-// Object.freeze(person) // object is freez we can change its values
+// Object.freeze(person) // object is freez we can't change its values
 // person.email = "sanket@hdfc.com" // it will not give any error but value is not chnaged
 // console.log(person);
 

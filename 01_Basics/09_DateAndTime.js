@@ -15,16 +15,16 @@ let myCreatedDate4 = new Date("01-14-2023")
 // console.log(myCreatedDate3.toLocaleString());
 // console.log(myCreatedDate4.toLocaleDateString());
 
-let currentTime = Date.now()
-console.log(currentTime);
-console.log(currentDate.getTime());
-console.log(Math.floor(currentTime/1000));
+// let currentTime = Date.now()
+// console.log(currentTime);
+// console.log(currentDate.getTime());
+// console.log(Math.floor(currentTime/1000));
 
-// `${newDate.getDay()} and the time `
+// // `${newDate.getDay()} and the time `
 
-newDate.toLocaleString('default', {
-    weekday: "long",
+// newDate.toLocaleString('default', {
+//     weekday: "long",
     
-}) // this help to specifiy format for date and time
+// }) // this help to specifiy format for date and time
 
 
