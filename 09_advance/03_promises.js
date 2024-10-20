@@ -104,3 +104,9 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
+
+// promises is not aware about status code, even responce came from backend with 404 it consider as right responce, so it only consider reject when there is problem with sending  request and it failed.
+
+// in fetch video he showed digram of how fecth intenally work,
+// serach these keyword to learn onFullFild, onRejection, data, web browser/node,  
+// fetch life cycle
