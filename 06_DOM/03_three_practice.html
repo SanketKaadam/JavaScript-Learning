@@ -11,19 +11,57 @@
 <script>
 
 const div = document.createElement('div')
-console.log(div);
-div.className = "parent"
-div.id = Math.round(Math.random() * 10 + 1)
-div.setAttribute("title", "Js")
-div.style.color = "Red"
-div.style.padding = "30px"
-//div.innerHTML = "Sanket Kadam"
+// Creates a new <div> element in memory (not visible on page yet)
 
+console.log(div);
+// Prints the created div element in console
+
+div.className = "parent"
+// Adds class="parent" to div
+
+div.id = Math.round(Math.random() * 10 + 1)
+// Generates random number between 1-10 and sets it as id
+
+div.setAttribute("title", "Js")
+// Adds title attribute
+// Result: title="Js"
+
+div.style.color = "Red"
+// Changes text color to red
+
+div.style.padding = "30px"
+// Adds 30px padding inside div
+
+//div.innerHTML = "Sanket Kadam"
+// Adds text inside div using innerHTML
+
+
+// Creates a text node containing "Sanket Kadam"
 const text = document.createTextNode("Sanket Kadam")
+
+// Adds text node inside div
 div.appendChild(text)
+
+// Adds div element inside body
+// Now div becomes visible on webpage
 document.body.appendChild(div)
 
+/*
+Performance Point
 
+For large DOM manipulations:
+createElement()
+createTextNode()
+appendChild()
+
+can be more efficient than repeatedly using:
+innerHTML
+
+because innerHTML reparses HTML.
+
+innerText directly sets text content, while createTextNode() manually creates 
+a text node object before adding it to the DOM, giving better control and safer text handling.
+*/
 
 
 

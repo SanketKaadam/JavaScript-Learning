@@ -2,6 +2,15 @@
 
 // Immediately Invoked Function Expressions (IIFE)
 
+/*
+IIFE stands for Immediately Invoked Function Expression.
+
+It is a function that:
+is created
+and runs immediately after creation.
+
+*/
+
 
 (function chai(){
     // named IIFE means we crated IIFE fuctions using function name
@@ -11,8 +20,34 @@
 // () -> wrapped fucntion in in this, mean this function name, now to call this we do ()()
 
 
-
+// With Arrow Function
 ( (name) => {
     // unnamed IIFE means we crated IIFE fuctions without using function name
     console.log(`DB CONNECTED TWO ${name}`);
 } )('hitesh') // here in 2nd () we can pass argumnent for function.
+
+/*
+Why use IIFE?
+Before let and const, JavaScript had scope problems with var.
+IIFE was used to create a private scope.
+
+Example:
+
+(function () {
+    var message = "secret";
+    console.log(message);
+})();
+
+console.log(message); // Error
+
+message exists only inside the IIFE.
+
+Interview Definition
+IIFE is a JavaScript function that executes immediately after it is defined.
+
+Real-world Use
+Used for:
+avoiding global variable pollution
+creating private scope
+executing setup code immediately
+*/

@@ -18,6 +18,182 @@
 </body>
 <script>
 
+/*
+# DOM in JavaScript
+
+DOM stands for:
+
+> **Document Object Model**
+
+It is a programming interface provided by browser to interact with HTML pages.
+
+---
+
+# Simple Meaning
+
+DOM converts HTML page into JavaScript objects.
+
+So JavaScript can:
+* change HTML
+* change CSS
+* add/remove elements
+* handle events
+
+---
+
+# Example HTML
+
+```html id="u8u20q"
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="title">Hello</h1>
+
+</body>
+</html>
+```
+
+Browser converts this into DOM tree.
+
+---
+
+# DOM Tree
+
+```text id="pljlwm"
+Document
+   |
+  html
+   |
+  body
+   |
+   h1
+```
+
+Every HTML tag becomes an object/node.
+
+---
+
+# Accessing DOM with JavaScript
+
+```html id="l6dqvs"
+<h1 id="title">Hello</h1>
+
+<script>
+    const element = document.getElementById("title");
+
+    console.log(element);
+</script>
+```
+
+Output:
+
+```javascript id="jlwmz8"
+<h1 id="title">Hello</h1>
+```
+
+---
+
+# Changing HTML Using DOM
+
+```javascript id="jlwm2m"
+const element = document.getElementById("title");
+
+element.innerText = "Welcome Sanket";
+```
+
+HTML changes from:
+
+```html id="8jlwmj"
+Hello
+```
+
+to:
+
+```html id="zjlwmn"
+Welcome Sanket
+```
+
+---
+
+# Why DOM is Important?
+
+Without DOM:
+
+❌ JavaScript cannot interact with webpage.
+
+DOM allows JavaScript to:
+
+✅ manipulate webpage dynamically.
+
+---
+
+# Common DOM Methods
+
+| Method               | Purpose                       |
+| -------------------- | ----------------------------- |
+| `getElementById()`   | select by id                  |
+| `querySelector()`    | select first matching element |
+| `querySelectorAll()` | select all matching elements  |
+| `createElement()`    | create new element            |
+| `appendChild()`      | add element                   |
+| `remove()`           | remove element                |
+
+---
+
+# Example → Change CSS
+
+```javascript id="jlwm3x"
+const title = document.getElementById("title");
+
+title.style.color = "red";
+```
+
+---
+
+# DOM Event Example
+
+```html id="jlwm5n"
+<button id="btn">Click</button>
+
+<script>
+document.getElementById("btn")
+    .addEventListener("click", () => {
+        alert("Button clicked");
+    });
+</script>
+```
+
+DOM helps JavaScript listen to browser events.
+
+---
+
+# Important Interview Point
+
+DOM is NOT JavaScript.
+
+DOM is provided by browser.
+
+JavaScript uses DOM APIs.
+
+---
+
+# Browser Creates DOM
+
+When browser loads HTML:
+
+1. Reads HTML
+2. Creates DOM tree
+3. JavaScript interacts with that tree
+
+---
+
+# Interview One-Line Answer
+
+> DOM (Document Object Model) is a tree-like representation of an HTML document that allows JavaScript to access and manipulate webpage elements dynamically.
+    
+*/
+
 const parent = document.querySelector('.parent')
 
 // console.log(parent);

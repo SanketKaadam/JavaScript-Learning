@@ -13,41 +13,172 @@
 <script>
 
 function addLang(lang){
+
+    // create new li tag
     const li = document.createElement('li')
+
+    // add text inside li
+    // here innerHTML insert text as html
     li.innerHTML = `${lang}`
+
+    // select element whos class is language
+    // and append newly created li inside it
     document.querySelector('.language').appendChild(li)
 }
 
+// function call
 addLang('Java')
 addLang('paython')
 
+
+
 function addLanguage(language){
+
+    // create new li tag
     const li = document.createElement('li')
+
+    // create text node and append inside li
+    // this is more optimized approch compare to innerHTML
     li.appendChild(document.createTextNode('Cpp'))
+
+    // append li into ul whos class is language
     document.querySelector('.language').appendChild(li)
 }
 
+// here by mistake you calling addLang instead of addLanguage
 addLang('SQL')
 addLang('Mongo')
 
-// Edit 
 
+
+// ================= EDIT =================
+
+
+// select 2nd li element
 const secondLang = document.querySelector('li:nth-child(2)')
+
+/*
+li:nth-child(2)
+is a CSS selector.
+
+It means:
+select the li element which is the 2nd child of its parent.
+
+Important Point
+nth-child(2)
+
+means:
+2nd child position
+
+NOT:
+2nd li from all li tags in whole document
+
+Even Elements
+li:nth-child(even)
+
+select:
+2nd
+4th
+6th
+
+Odd Elements
+li:nth-child(odd)
+
+select:
+1st
+3rd
+5th
+
+Very Important Interview Point
+
+nth-child() counting starts from:
+1
+
+NOT from 0.
+Unlike arrays.
+*/
+
 console.log(secondLang)
+
+// old approch to replace text
+// this directly override html
 //secondLang.innerHTML = "Mojo"
+
+
+// create new li tag
 const newLi  = document.createElement('li')
+
+// add text inside new li
 newLi.textContent = "Go Lang"
+
+// replace 2nd li with newly created li
 secondLang.replaceWith(newLi)
 
 
-//Edit
+
+
+// ================= EDIT =================
+
+
+// select first li element
 const firstLang = document.querySelector("li:first-child")
+
+// outerHTML replace complete element including tag
+// old li completely removed and new li added
 firstLang.outerHTML = '<li>TypeScript</li>'
 
-//remove
-const lastLang = document.querySelector('li:last-child')
-lastLang.remove()
+/*
+const firstLang = document.querySelector("li:first-child")
 
+Example
+<ul>
+    <li>Java</li>
+    <li>Python</li>
+</ul>
+
+<ul>
+    <li>Mongo</li>
+    <li>SQL</li>
+</ul>
+Which Elements Match?
+
+Both these match:
+<li>Java</li>
+<li>Mongo</li>
+
+Because both are first child inside their parent <ul>.
+
+But:
+querySelector()
+returns only first matching element from document.
+
+So result:
+<li>Java</li>
+
+
+If You Want All Matching Elements
+
+Use:
+document.querySelectorAll("li:first-child")
+
+Output:
+NodeList(2)
+
+Containing:
+Java
+Mongo
+*/
+
+
+
+// ================= REMOVE =================
+
+
+// select last li element
+const lastLang = document.querySelector('li:last-child')
+
+// remove last li from DOM
+lastLang.remove()
 </script>
 
 </html>

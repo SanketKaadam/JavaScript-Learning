@@ -1,32 +1,32 @@
 function addTwoNumber(num1, num2){
   let result  = num1+num2;
-  //console.log("Inside addTwoNumber function"); 
+  console.log("Inside addTwoNumber function"); 
   
   return result
   console.log("after return addTwoNumber function"); // after return code is not recheble, it not give any error
 }
 
-// addTwoNumber // this is reference
-// addTwoNumber() // this is function excution
+addTwoNumber // this is reference
+addTwoNumber() // this is function excution
 
 let result = addTwoNumber() // here we pass nathing
-//console.log(result); // output NaN
+console.log(result); // output NaN
 
 let result1 = addTwoNumber(10, 20)
-//console.log(result1);
+console.log(result1);
 
 function loginUserMessage(username = "sam"){ // if at the time of function call, arggument is not pass that time by default it take sam
 
     //if(username === undefined){
     if(!username){ // checking vlaue is  undefined or not, if it undefine it print log and return
-        //console.log("PLease enter a username");
+        console.log("PLease enter a username");
         return
     }
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
+console.log(loginUserMessage("hitesh"))
+console.log(loginUserMessage())
 
 
 
@@ -35,13 +35,13 @@ function calculateCartValues(...num){ // this ... also called rest when we don't
   return num
 }
 
-//console.log(calculateCartValues(100, 200, 300)); // this will print array with this 3 elements 
+console.log(calculateCartValues(100, 200, 300)); // this will print array with this 3 elements 
 
 function anotherFun(val1, val2, ...num){
   return num;
 }
 
-//console.log(anotherFun(10, 20, 30, 40, 50, 60)); // this time onnly last 4 elements from arrguments are store in array and 1st and 2nd argumrnt store in val1 and val2 
+console.log(anotherFun(10, 20, 30, 40, 50, 60)); // this time onnly last 4 elements from arrguments are store in array and 1st and 2nd argumrnt store in val1 and val2 
 
 const person = {
   name : "sanket", // here i gave name not username.

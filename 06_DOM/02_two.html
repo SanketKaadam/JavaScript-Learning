@@ -18,10 +18,10 @@
 <script>
     const parent = document.querySelector('.parent')
     // console.log(parent); // retun object which contain parent as class
-    // console.log(parent.children); // this return HTMLCollection, so children retunr HTMLCollection
+    // console.log(parent.children); // this return HTMLCollection, so children retunr HTMLCollection, children is keyword that only we need to use
     // console.log(parent.children[1].innerHTML); // we know that children retun HTMLCollection then we can use [] te fecth values using index.
 
-    // On HTMLCollection can't provide forEach but we can use for loop, parent not provide HTMLCollection but parent.children provide thats why we use that.
+    //On HTMLCollection can't provide forEach but we can use for loop, parent not provide HTMLCollection but parent.children provide thats why we use that.
     // for (let i = 0; i < parent.children.length; i++) {
     //      console.log(parent.children[i].innerHTML);
         
@@ -29,13 +29,14 @@
     parent.children[1].style.color = "orange"
     // console.log(parent.firstElementChild); // return 1st child element 
     // console.log(parent.lastElementChild); // return last child element 
+    // firstElementChild and lastElementChild are DOM properties that return element objects.
 
-    const dayOne = document.querySelector('.day') // here we fetch object whos class is day, 
-    // console.log(dayOne); // 
-    // console.log(dayOne.parentElement); // class = day parent tag class is parent, so it return parent element 
+    const dayOne = document.querySelector('.day') // here we fetch object whos class is day,  returns only the first matching element.
+     console.log(dayOne); // 
+    console.log(dayOne.parentElement); // class = day parent tag class is parent, so it return parent element 
     // console.log(dayOne.nextElementSibling); // return next element whos class = day. ie tuesday element
 
-    console.log("NODES: ", parent.childNodes);
+    //console.log("NODES: ", parent.childNodes);
 
     // nodes are complex tree structure, when you put enter after <div class="parent"> that also consider as one node,
     // same you press enter after <div class="day">Monday</div> consider as one more node

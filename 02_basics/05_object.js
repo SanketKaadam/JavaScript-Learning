@@ -6,8 +6,8 @@ const course = {
 
 //console.log(course.courseInstreactor); // now every time to get value of courseInstreactor we need to use object name and dot, insted of this we store that value in new varibale and we use that variable when we want that value eg
 
-//const {courseInstreactor} = course //{keyname} = objectName
-//console.log(courseInstreactor);
+const {courseInstreactor} = course //{keyname} = objectName
+console.log(courseInstreactor);
 
 const {courseInstreactor : intrector} = course  // here we 1st gets value using key from cource object and the store that into intrector variable, reson is if we want short varibale name then we can do this, this is called object destrictor. {keyName : varibaleName } = objectName
 
