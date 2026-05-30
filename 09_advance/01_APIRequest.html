@@ -11,20 +11,169 @@
     <h2>followers : </h2>
 </body>
 <script>
+
+// github api url
+// this api return user data in JSON format
   const requestURL = "https://api.github.com/users/hiteshchoudhary"
+
+  // create XMLHttpRequest object
+// used to send HTTP request to server/API
+// xhr means XML HTTP Request
   const xhr = new XMLHttpRequest();
+
+  // configure request
+// GET -> fetch data from server
+// requestURL -> api endpoint
+// request not sent yet
+// only setup/configuration done
   xhr.open('GET', requestURL);
+
+  // this function run whenever request state changes
+  // request go through multiple states:
+  // 0 -> unsent
+  // 1 -> opened
+  // 2 -> headers received
+  // 3 -> loading
+  // 4 -> done
   xhr.onreadystatechange = function(){
+
+
     console.log(xhr.readyState);
+
+  // response from api comes as string
+  // JSON.parse convert JSON string into JS object
     const data = JSON.parse(this.responseText)
+
+    // print complete github user object
     console.log(data);
+
+    // access followers property from object
     console.log(data.followers);
     document.querySelector("h1").innerText = data.name
+
+    // select img tag
+  // set src attribute dynamically
+  // image now load from github avatar url
     const avtar = data.avatar_url;
     document.querySelector("img").setAttribute("src",avtar)
+
+    // display followers count inside h2
     document.querySelector("h2").innerText = "Followers : "+data.followers 
 
   }
+
+  // actually send request to github server
   xhr.send()
+
+  /*
+
+what is xhr.onreadystatechange?
+xhr.onreadystatechange
+
+is an event handler/property.
+
+It means:
+run some code whenever request state changes.
+
+Simple Meaning
+When API request changes state:
+
+0 → 1 → 2 → 3 → 4
+
+browser automatically executes:
+onreadystatechange
+function.
+
+Why Function Used?
+
+Because browser needs:
+"what code should I run when state changes?"
+
+So we give callback function.
+
+Why Not Direct Console.log?
+Wrong:
+xhr.onreadystatechange = console.log("hello")
+
+Because:
+console.log()
+
+runs immediately.
+Browser needs function reference, not function result.
+
+Important Concept
+
+This is callback function.
+
+Because:
+you don't call it manually
+browser calls it automatically
+
+
+Why Needed?
+Because API calls are asynchronous.
+Request takes time.
+JavaScript should not wait/block execution.
+
+So browser says:
+"When response state changes, I’ll notify you using callback function."
+
+
+Important Interview Point
+onreadystatechange runs multiple times.
+So usually we check:
+if(xhr.readyState === 4)
+
+to ensure request completed.
+
+
+------------------------------------------
+
+What is xhr.readyState?
+
+xhr.readyState
+tells:
+current state/status of API request.
+
+Simple Meaning
+When browser sends request to server, request does not complete instantly.
+It goes through multiple stages.
+
+readyState tells:
+currently request is in which stage.
+
+States of readyState
+| Value | Meaning                                 |
+| ----- | --------------------------------------- |
+| `0`   | request not initialized                 |
+| `1`   | connection setup done (`open()` called) |
+| `2`   | request sent, headers received          |
+| `3`   | data loading                            |
+| `4`   | request completed                       |
+
+
+
+Old Way (XHR)
+const xhr = new XMLHttpRequest()
+
+xhr.onreadystatechange = function(){
+
+   if(xhr.readyState === 4){
+
+      console.log(this.responseText)
+
+   }
+
+}
+xhr.open('GET', url)
+xhr.send()
+
+
+then today modern JavaScript uses:
+fetch()
+
+instead of:
+XMLHttpRequest
+  */
 </script>
 </html>

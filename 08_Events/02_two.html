@@ -20,7 +20,11 @@
     const changeMe = setTimeout(changeText, 2000) // this only print one time after mentioned time, here we define function reference not calling function using ()
 
     document.querySelector('#stop').addEventListener('click', function(){
-        clearTimeout(changeMe) //clearTimeout() is a JavaScript function that is used to cancel a timer that was previously established by calling setTimeout(). The setTimeout() function schedules the execution of a function or code after a specified delay (in milliseconds), and clearTimeout() allows you to stop that scheduled execution before it happens.
+        clearTimeout(changeMe) //clearTimeout() is a JavaScript function that is 
+        // used to cancel a timer that was previously established by calling 
+        // setTimeout(). The setTimeout() function schedules the execution of a 
+        // function or code after a specified delay (in milliseconds), and 
+   // clearTimeout() allows you to stop that scheduled execution before it happens.
         console.log("STOPPED")
     })
 </script>

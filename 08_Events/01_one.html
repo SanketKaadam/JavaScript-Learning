@@ -31,9 +31,89 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+
+    /*
+    What is false in above addEventListener function 
+    Two Phases in Event Propagation
+
+When event happens in browser, it travels in 2 ways:
+1. Capturing phase  (top → bottom)
+2. Bubbling phase   (bottom → top)
+
+Example Structure
+<ul id="images">
+    <li>
+        <img id="owl">
+    </li>
+</ul>
+
+Suppose user clicks image.
+
+Bubbling Phase (false)
+
+Event moves:
+img → li → ul → body → html → document
+
+bottom to top.
+This is default behavior.
+
+Capturing Phase (true)
+Event moves:
+document → html → body → ul → li → img
+
+top to bottom.
+
+Important Point
+
+Today mostly:
+
+false
+
+is used.
+
+And actually it is default.
+
+So usually we write:
+
+addEventListener('click', function(){
+
+})
+
+without false.
+
+
+Example
+document.getElementById('images')
+.addEventListener('click', function(){
+    console.log("ul clicked")
+}, false)
+
+document.getElementById('owl')
+.addEventListener('click', function(){
+    console.log("image clicked")
+}, false)
+
+If image clicked:
+
+Output:
+image clicked
+ul clicked
+
+Because bubbling goes upward.
+
+With true
+addEventListener(..., true)
+
+Output becomes:
+ul clicked
+image clicked
+
+Because capturing goes downward.
+    
+    */
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
@@ -47,16 +127,16 @@
     // }, false)
    
     
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.tagName);
+    //     if (e.target.tagName === 'IMG') {
+    //         console.log(e.target.id);
+    //         let removeIt = e.target.parentNode
+    //         removeIt.remove()
+    //     }
     
         
-    })
+    // })
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
