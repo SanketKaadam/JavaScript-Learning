@@ -1,9 +1,19 @@
 let currentDate = new Date();
-//console.log(currentDate);
-// console.log(currentDate.getDate());
-// console.log(currentDate.toLocaleDateString());
-// console.log(currentDate.toDateString());
-// console.log(currentDate.toTimeString());
+
+// console.log(currentDate); 
+// 2026-05-28T12:30:45.123Z   (example output)
+
+// console.log(currentDate.getDate()); 
+// 28
+
+// console.log(currentDate.toLocaleDateString()); 
+// "28/5/2026"
+
+// console.log(currentDate.toDateString()); 
+// "Thu May 28 2026"
+
+// console.log(currentDate.toTimeString()); 
+// "18:00:45 GMT+0530 (India Standard Time)"
 
 let myCreatedDate = new Date(2024, 0, 25 )
 let myCreatedDate2 = new Date(2024, 0, 25, 5, 3 )
@@ -11,11 +21,32 @@ let myCreatedDate3 = new Date("2023-01-14")
 let myCreatedDate4 = new Date("01-14-2023")
 let myCreatedDate5 = new Date(2026)
 
-// console.log(myCreatedDate);
-// console.log(myCreatedDate2);
-// console.log(myCreatedDate3.toLocaleString());
-// console.log(myCreatedDate4.toLocaleDateString());
-// console.log(myCreatedDate5);
+// console.log(myCreatedDate); 
+// Thu Jan 25 2024 00:00:00 GMT+0530 (India Standard Time)
+
+// console.log(myCreatedDate2); 
+// Thu Jan 25 2024 05:03:00 GMT+0530 (India Standard Time)
+
+// console.log(myCreatedDate3.toLocaleString()); 
+// "14/1/2023, 5:30:00 am"
+
+// console.log(myCreatedDate4.toLocaleDateString()); 
+// "14/1/2023"
+
+// console.log(myCreatedDate5); 
+// Thu Jan 01 1970 05:30:02 GMT+0530 (India Standard Time)
+
+/*
+Important:
+new Date(2026)
+
+does NOT mean year 2026.
+
+It means:
+2026 milliseconds after Jan 1, 1970
+
+That’s why output is around 1970.
+*/
 
 /*
 

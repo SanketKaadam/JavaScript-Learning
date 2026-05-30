@@ -1,7 +1,7 @@
 // Primative DataType
 let age = 30 // number
 let name = 'sanket' // string
-let temp = null // object 
+let temp = null // object it return object but it is primitive type
 let city; // undefined
 let id = Symbol(123) //symbol
 let acId  = Symbol("123") //symbol

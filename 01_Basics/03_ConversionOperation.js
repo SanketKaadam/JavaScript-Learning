@@ -32,7 +32,7 @@ let res = true; // this is not number, this is boolean
 // "33" => 33
 // "33abc" => NaN
 //  true => 1; false => 0
-// null => 0
+// null => 0    Number(null) converts null to 0
 // undefined => NaN
 //---------------------------------------------------------------
 
@@ -40,36 +40,59 @@ let res = true; // this is not number, this is boolean
 
 // let numberInString = String(someNumber)
 
-// console.log(numberInString);
-// console.log(typeof numberInString);
+// console.log(numberInString); // print 100 but actual value is "100"
+// console.log(typeof numberInString); // string
 
 // let numWithString = "40asd"
 
-// let numFromString = Number(numWithString)
+// let numFromString = Number(numWithString) 
 
-// console.log(numFromString);
-// console.log(typeof numFromString);
+// console.log(numFromString); // NaN
+// console.log(typeof numFromString); // number
 
 //--------------------------------------------------------------------------
 // Boolean Convertion
 
 // let accountActive = 1
 
-// let booleanAcActive = Boolean(accountActive) // 1 -> true
-// console.log(booleanAcActive);
-// console.log(typeof booleanAcActive);
+// let booleanAcActive = Boolean(accountActive) 
+// console.log(booleanAcActive); // 1 -> true  1 is truthy.
+// console.log(typeof booleanAcActive); // boolean
 
 
 // let accountActive2 = "sdasda" // any value is true
 
 // let booleanAcActive2 = Boolean(accountActive2)
-// console.log(booleanAcActive2);
-// console.log(typeof booleanAcActive2);
+// console.log(booleanAcActive2); // true  Any non-empty string is truthy.
+// console.log(typeof booleanAcActive2); // boolean
 
 // let AcActive3 = 0 // only for 0 and "" it giving false for other including -ve number it giving true
 // let booleanAcActive3 = Boolean(AcActive3)
 // console.log('booleanAcActive3', booleanAcActive3);
 // console.log(typeof booleanAcActive3);
+
+/*
+
+Falsy Values in JavaScript
+There are only a few falsy values:
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+
+Everything else is truthy, including:
+"0"
+"false"
+[]
+{}
+-10
+" "
+
+*/
 
 
 // --------------- Hitesh Notes ----------------------
@@ -121,11 +144,11 @@ let negValue = -value
 // console.log(negValue); // -3
 
 // console.log(2+2); // 4
-// console.log(2-2);
-// console.log(2*2);
-// console.log(2**3);
-// console.log(2/3);
-// console.log(2%3);
+// console.log(2-2); //0
+// console.log(2*2); //4
+// console.log(2**3); // Power -> 2³ = 8
+// console.log(2/3); // 0.6666666666666666
+// console.log(2%3); // 2  % is called the modulus operator (remainder operator).
 
 let str1 = "hello"
 let str2 = " hitesh"
@@ -140,9 +163,19 @@ let str3 = str1 + str2
 //So position of string matters in JavaScript.
 
  //console.log( (3 + 4) * 5 % 3); // 2
+ /*
+ (3 + 4) = 7
+7 * 5 = 35
+35 % 3 = 2
+ */
 
 // console.log(+true); //1
-// console.log(+""); //0
+// console.log(+""); //0   Empty string converts to 0.
+
+/*
+The + before a value is called the unary plus operator.
+It tries to convert the value into a number.
+*/
 
 /*
 +"5"       // 5
@@ -159,10 +192,27 @@ num1 = num2 = num3 = 2 + 2
 
 
 let gameCounter = 100
-++gameCounter;
-//console.log(gameCounter);
-gameCounter++
-//console.log(gameCounter);
+++gameCounter;  // First increases value, then uses it.
+//console.log(gameCounter); //101
+gameCounter++ // use first, then increment
+//console.log(gameCounter); //102
+
+/*
+Main Difference
+Difference appears when assigning:
+
+let x = 5;
+let y = ++x;
+
+console.log(x); // 6
+console.log(y); // 6
+
+let a = 5;
+let b = a++;
+
+console.log(a); // 6
+console.log(b); // 5
+*/
 
 
 /*

@@ -1,25 +1,33 @@
 let num = 3.51
 let someNum = new Number(1000000)
 
-console.log(num.toFixed(2));
-console.log(num.toPrecision(1));
-console.log(num.toExponential(1));
+console.log(num.toFixed(2));                 // "3.51"
+console.log(num.toPrecision(1));             // "4"
+console.log(num.toExponential(1));           // "3.5e+0"
 
-console.log(someNum.toLocaleString('en-IN'));
-console.log(someNum.toString().length);
-console.log(someNum.toString().charAt(2));
+console.log(someNum.toLocaleString('en-IN')); // "10,00,000"
+console.log(someNum.toString().length);       // 7
+console.log(someNum.toString().charAt(2));    // "0"
 
 // ++++++++++++++++++++++++++++ Math +++++++++++++
 
-console.log(Math);
-console.log(Math.abs(-4)); // Just convert yo +ve num
-console.log(Math.ceil(4.3)); // it will convert to next number even decimal is 1, output is 5
-console.log(Math.floor(4.9)) // output is 4 even decimal is .9
+console.log(Math); // Math object
 
-console.log(Math.max()); // output Infinity
+console.log(Math.abs(-4)); // 4   abs menas absolute value, It converts a negative number to positive.
+
+console.log(Math.ceil(4.3)); // 5
+
+console.log(Math.floor(4.9)); // 4
+
+//Math.max() finds largest value.
+//When no values are given, smallest possible starting value is used internally → -Infinity.
+console.log(Math.max()); // -Infinity
+
 console.log(Math.min); // [Function: min]
-console.log(Math.max(10, 20, 30, 40)); //40
-console.log(Math.min(10, 20, 30, 40));// 10
+
+console.log(Math.max(10, 20, 30, 40)); // 40
+
+console.log(Math.min(10, 20, 30, 40)); // 10
 
 
 //console.log(Math.random()); // between 0 (inclusive) and 1 (exclusive)

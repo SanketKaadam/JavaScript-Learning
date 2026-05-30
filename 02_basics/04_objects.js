@@ -5,6 +5,20 @@ const instUser = {} // this will create non-singelton or normal object
 // this both print same output ie empty object {}
 
 
+/*
+If asked:
+Difference between new Object() and {}?
+
+Answer:
+Both create an object. new Object() uses the Object constructor, while {} uses
+ object literal syntax. In modern JavaScript they behave almost the same, but 
+ object literals ({}) are preferred because they are simpler and more readable.
+
+The "singleton vs non-singleton" wording is mostly a teaching simplification and
+ isn't a distinction developers usually make in real-world JavaScript.
+*/
+
+
 const regulerUser = {
     id : "123",
     fullName : {
@@ -36,14 +50,61 @@ const newObj6 = {
 }
 
 const newObj3 = Object.assign({}, newObj1, newObj2) // this will combine mentioned objects as single object, here {} is consider as target object, and other objects that we mentioned consider as source, elements copy from source to target. this way we don't use
+/*
+Duplicate Keys in Object.assign()
+
+If two objects have the same key:
+
+const a = { name: "Sanket" };
+const b = { name: "Rahul" };
+
+const result = Object.assign({}, a, b);
+
+console.log(result);
+
+Output:
+
+{ name: 'Rahul' }
+
+The later source object overwrites the earlier one.
+*/
 
 const newObj4 = { newObj1, newObj2 } // this will create nested object with two key as object name with there values.
+
 // console.log(newObj3);
+// { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+
 // console.log(newObj4);
+/*
+{
+  newObj1: {
+    1: "a",
+    2: "b"
+  },
+  newObj2: {
+    3: "c",
+    4: "d"
+  }
+}
+*/
 
 const newObj5 = {...newObj1, ...newObj2, ...newObj6} // this is good way to combine all objects, ... means spread, ie spred all objest and then collect as single object eg when we throw glass it spred.
 
 // console.log(newObj5);
+/*
+{
+  '1': 'a',
+  '2': 'b',
+  '3': 'c',
+  '4': 'd',
+  '5': 'e',
+  '6': 'f'
+}
+*/
+
+/*
+If duplicate keys exist, the last one overwrites the previous value.
+*/
 
 /*
 
